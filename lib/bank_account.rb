@@ -4,14 +4,10 @@ class BankAccount
 
   def initialize(name)
     @name = name
-    @balance = 1000
+    @balance = 1000 || balance
     @status = "open"
     @amount = amount
   end
-  
-  def balance
-    @balance
-  end 
 
   def deposit(amount)
     @balance += amount
