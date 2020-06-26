@@ -4,7 +4,7 @@ class BankAccount
 
   def initialize(name)
     @name = name
-    @balance = 1000 || balance
+    @balance = 1000
     @status = "open"
     @amount = amount
   end
