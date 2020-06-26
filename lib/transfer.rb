@@ -17,8 +17,9 @@ class Transfer
   end
 
   def execute_transaction
-    if @sender.balance < @amount && @status == "rejected"
-      puts "Transaction rejected. Please check your account balance."
+    if @sender.balance < @amount
+       @status = "rejected"
+       puts "Transaction rejected. Please check your account balance."
 
     elsif @status == "complete"
       puts "Transaction was already excuted"
@@ -27,6 +28,7 @@ class Transfer
       @receiver.deposit( @amount )
       @status = "complete"
     end
+    @status
   end
 
   def reverse_transfer
