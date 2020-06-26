@@ -12,7 +12,7 @@ class BankAccount
     self.balance += amount
   end
 
-  def withdrawal(amount)
+  def withdraw(amount)
     self.balance -= amount
   end
 
